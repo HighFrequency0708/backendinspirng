@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.5.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.gd</groupId>
+    <artifactId>server</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>server</name>
+    <description>Gaoda backend web server by Spring boot 2</description>
+
+    <modules>
+        <!--    通用模块    -->
+        <module>common</module>
+        <!--    业务模块    -->
+        <module>business</module>
+    </modules>
+
+    <!--  依赖版本控制  -->
+    <properties>
+        <java.version>1.8</java.version>
+        <spring.boot.version>2.2.5.RELEASE</spring.boot.version>
+        <lombok.version>1.18.12</lombok.version>
+        <mysql.version>5.1.42</mysql.version>
+        <mybatis-starter.version>2.1.2</mybatis-starter.version>
+        <common-lang3.version>3.3.2</common-lang3.version>
+        <commons-codec.version>1.10</commons-codec.version>
+        <fastjson.version>1.1.41</fastjson.version>
+        <druid.version>1.1.21</druid.version>
+        <mybatis.generator.version>1.3.5</mybatis.generator.version>
+        <log4j.version>1.3.8.RELEASE</log4j.version>
+    </properties>
+
+
+    <!--  依赖管理  -->
+   <dependencyManagement>
+       <dependencies>
+           <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-web</artifactId>
+               <version>${spring.boot.version}</version>
+           </dependency>
+           <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-aop</artifactId>
+               <version>${spring.boot.version}</version>
+           </dependency>
+           <dependency>
+               <groupId>org.mybatis.spring.boot</groupId>
+               <artifactId>mybatis-spring-boot-starter</artifactId>
+               <version>${mybatis-starter.version}</version>
+           </dependency>
+           <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-devtools</artifactId>
+               <scope>runtime</scope>
+               <optional>true</optional>
+           </dependency>
+           <dependency>
+               <groupId>mysql</groupId>
+               <artifactId>mysql-connector-java</artifactId>
+               <version>${mysql.version}</version>
+           </dependency>
+           <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-configuration-processor</artifactId>
+               <optional>true</optional>
+           </dependency>
+           <dependency>
+               <groupId>org.projectlombok</groupId>
+               <artifactId>lombok</artifactId>
+               <version>${lombok.version}</version>
+               <optional>true</optional>
+           </dependency>
+           <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-test</artifactId>
+               <version>${spring.boot.version}</version>
+               <scope>test</scope>
+           </dependency>
+           <!-- apache common lang -->
+           <dependency>
+               <groupId>org.apache.commons</groupId>
+               <artifactId>commons-lang3</artifactId>
+               <version>${common-lang3.version}</version>
+           </dependency>
+            <!-- Apache Commons Codec (TM) software provides implementations of
+             common encoders and decoders such as Base64, Hex, Phonetic and URLs. -->
+           <dependency>
+               <groupId>commons-codec</groupId>
+               <artifactId>commons-codec</artifactId>
+               <version>${commons-codec.version}</version>
+           </dependency>
+           <!-- 格式化对象 -->
+           <dependency>
+               <groupId>com.alibaba</groupId>
+               <artifactId>fastjson</artifactId>
+               <version>${fastjson.version}</version>
+           </dependency>
+           <!--alibaba druid数据库连接池-->
+           <dependency>
+               <groupId>com.alibaba</groupId>
+               <artifactId>druid-spring-boot-starter</artifactId>
+               <version>${druid.version}</version>
+           </dependency>
+           <!-- mybatis.generator -->
+           <dependency>
+               <groupId>org.mybatis.generator</groupId>
+               <artifactId>mybatis-generator-core</artifactId>
+               <version>${mybatis.generator.version}</version>
+           </dependency>
+           <!-- apache common lang -->
+           <dependency>
+               <groupId>org.apache.commons</groupId>
+               <artifactId>commons-lang3</artifactId>
+               <version>${common-lang3.version}</version>
+           </dependency>
+       </dependencies>
+   </dependencyManagement>
+
+</project>
